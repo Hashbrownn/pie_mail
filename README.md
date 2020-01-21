@@ -21,8 +21,10 @@ Now, in reference to the attachments in the Email:
     
 
 Some Issues and Workarounds:
+
 ● Applying styling to the dataframe requires the indices to be unique.
   Using groupby() may help in creating indices with unique values.
+
 ● Even after applying the styling to the dataframes, some mail clients do not support a few
   kinds of styling tags.
   premailer is used so that the HTML styling of the tables is not lost while using different
@@ -30,10 +32,12 @@ Some Issues and Workarounds:
   Ex: GMail doesn’t support HTML styling tags without inline CSS.
   Hence, premailer is used to convert the code-generated HTML string to GMail compatible
   HTML scripts.
+
 ● Be mindful of the styling being applied to the dataframe too.
   As the more styling attributes we provide, the more the size of the HTML string increases
   and GMail supports only 120 Kb of inline data , which may lead to a clipping of the
   message.
+
 ● If the code is being run on a serverless machine(like AWS Lambda) for any attachments
   created, the file path needs to be modified with path= r'/tmp/ ' , so as to reference the
   temporary storage.
