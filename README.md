@@ -11,16 +11,18 @@ The code facilitates running on a serverless framework like `AWS Lambda` e.t.c.
 
 Now, in reference to the attachments in the Email:
 
-1. `Inline Table`.
+1. `Inline Table`:
+
     An SQL Connection is initiated from the code itself and the resultant output is transformed into a pandas dataframe.
     The pandas dataframe in turn is styled with the help of HTML to apply desired styling(colors, fonts and grids) to the table.    
   
-2. `CSV` file attachment.
+2. `CSV` file attachment:
+
     The secondary aim of our project is to add an `CSV` file as an attachment.
     The CSV file is created in the code itself, an SQL Query is run and the output is written into a CSV file, in turn the file is           attached as a payload to the mail.
     
 
-Some Issues and Workarounds:
+`Some Issues and Workarounds:`
 
 ● Applying `styling` to the dataframe requires the indices to be unique.
   Using `groupby()` may help in creating indices with unique values.
