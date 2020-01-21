@@ -1,9 +1,7 @@
 # pie_mail
-My first project used to send mails using Python.
+This GIT project is my first and the code can be used to send mails using Python.
 
-This code is a basic mail sending code with Python, found on the web.
-
-It has been customised so as to cater to my needs.
+The basic part/structure of the code can be found on the web. It has been customised so as to cater to my needs.
 
 This modified version of code, aims at sending an Email with a table as an inline attachment an also a `CSV` file as an actual attachment.
 
