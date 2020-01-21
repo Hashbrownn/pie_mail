@@ -22,19 +22,23 @@ Now, in reference to the attachments in the Email:
     The CSV file is created in the code itself, an SQL Query is run and the output is written into a CSV file, in turn the file is           attached as a payload to the mail.
     
 
-`Some Issues and Workarounds:`
+`Some known issues and workarounds:`
 
 ● Applying `styling` to the dataframe requires the indices to be unique.
+
   Using `groupby()` may help in creating indices with unique values.
 
 ● Even after applying the styling to the dataframes, some mail clients do not support a few
   kinds of styling tags.
+  
   `premailer` is used so that the HTML styling of the tables is not lost while using different mail clients to view the email and enable    cross compatibility.
+
   Ex: `GMail` doesn’t support HTML styling tags without inline CSS.
   Hence, `premailer` is used to convert the code-generated HTML string to GMail compatible
   `HTML scripts`.
 
 ● Be mindful of the styling being applied to the dataframe too.
+  
   As the more styling attributes we provide, the more the size of the HTML string increases
   and GMail supports only `120 Kb` of `inline data`, which may lead to a clipping of the
   message.
